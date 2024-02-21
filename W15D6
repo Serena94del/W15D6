@@ -1,0 +1,1676 @@
+{
+ "cells": [
+  {
+   "cell_type": "code",
+   "execution_count": 1,
+   "id": "6d124612-8e86-44ba-9d22-a1662c978d12",
+   "metadata": {
+    "tags": []
+   },
+   "outputs": [],
+   "source": [
+    "mat = [[0, 1, 2, 3, 4],\n",
+    "       [5, 6, 7, 8, 9],\n",
+    "       [10, 11, 12, 13, 14]]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 5,
+   "id": "455173c7-128b-4bd8-8151-e7d778dfe2b2",
+   "metadata": {
+    "tags": []
+   },
+   "outputs": [],
+   "source": [
+    "#es.1-visualizzare l'elemento nella riga 2,posizione 3"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 2,
+   "id": "b963678b-b9cc-4aa9-9aea-dc7782888bec",
+   "metadata": {
+    "tags": []
+   },
+   "outputs": [],
+   "source": [
+    "elemento = mat[2][3]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 4,
+   "id": "e9d596f7-3b19-44c1-9ae1-fdd32e9a0860",
+   "metadata": {
+    "tags": []
+   },
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "13"
+      ]
+     },
+     "execution_count": 4,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "elemento"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "ac03709f-d825-42c2-978d-e5eed118764b",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "#es.2-visualizza elemento nella riga 1,posizione 2"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 2,
+   "id": "b54379fa-bd3c-4fb3-b109-b94b878d2b83",
+   "metadata": {
+    "tags": []
+   },
+   "outputs": [],
+   "source": [
+    "import numpy as np"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 4,
+   "id": "5db68d4d-d2cd-4957-a5b4-17122606c48d",
+   "metadata": {
+    "tags": []
+   },
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "array([[ 0,  1,  2,  3,  4],\n",
+       "       [ 5,  6,  7,  8,  9],\n",
+       "       [10, 11, 12, 13, 14]])"
+      ]
+     },
+     "execution_count": 4,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "np.array(mat)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 6,
+   "id": "30e23c89-3377-4c70-b52f-1f7c6788237a",
+   "metadata": {
+    "tags": []
+   },
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "7"
+      ]
+     },
+     "execution_count": 6,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "mat[1][2]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "16fbe2c2-4562-4159-9ca3-14dcd010e2d5",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "#es.3"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 7,
+   "id": "0a40cd27-eabc-4bd9-a495-19e1f80f78b3",
+   "metadata": {
+    "tags": []
+   },
+   "outputs": [],
+   "source": [
+    "linear_data = np.array([x for x in range(27)])"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 11,
+   "id": "74f6e7a4-2199-4977-aca6-f7b02d058696",
+   "metadata": {
+    "tags": []
+   },
+   "outputs": [],
+   "source": [
+    "newlinear_data = linear_data.reshape((3,3,3))"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 12,
+   "id": "791440dd-546e-44f9-9598-7a7616554395",
+   "metadata": {
+    "tags": []
+   },
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "array([[[ 0,  1,  2],\n",
+       "        [ 3,  4,  5],\n",
+       "        [ 6,  7,  8]],\n",
+       "\n",
+       "       [[ 9, 10, 11],\n",
+       "        [12, 13, 14],\n",
+       "        [15, 16, 17]],\n",
+       "\n",
+       "       [[18, 19, 20],\n",
+       "        [21, 22, 23],\n",
+       "        [24, 25, 26]]])"
+      ]
+     },
+     "execution_count": 12,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "newlinear_data"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "f46f93ad-da1f-43d3-ad61-622943e5575d",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "#per accedere ad un singolo elemento : selezioniamo in primis la lista, poi la riga, infine la posizione prescelta."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 14,
+   "id": "66f9fa3f-5fc5-4393-9abc-d7707ce0b51e",
+   "metadata": {
+    "tags": []
+   },
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "25"
+      ]
+     },
+     "execution_count": 14,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "newlinear_data[2][2][1]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "f24659fe-cc42-40b8-8357-ee853cc6f835",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "#es.4:"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 15,
+   "id": "e83d060f-3b15-41bf-922a-70167cf8206e",
+   "metadata": {
+    "tags": []
+   },
+   "outputs": [],
+   "source": [
+    "distanzaesatta= np.linspace(0,28.75,num=15)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 16,
+   "id": "14e559e3-e4a9-401c-9c4b-c00239439030",
+   "metadata": {
+    "tags": []
+   },
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "array([ 0.        ,  2.05357143,  4.10714286,  6.16071429,  8.21428571,\n",
+       "       10.26785714, 12.32142857, 14.375     , 16.42857143, 18.48214286,\n",
+       "       20.53571429, 22.58928571, 24.64285714, 26.69642857, 28.75      ])"
+      ]
+     },
+     "execution_count": 16,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "distanzaesatta"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 17,
+   "id": "38011b4e-f822-40d4-b3e5-e71f0ce67ee5",
+   "metadata": {
+    "tags": []
+   },
+   "outputs": [],
+   "source": [
+    "#es.5"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 1,
+   "id": "07767e24-373a-47c5-a1bb-03bbe4fe71fd",
+   "metadata": {
+    "tags": []
+   },
+   "outputs": [],
+   "source": [
+    "import pandas as pd"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 22,
+   "id": "942cdeb6-7fa3-42d4-b80b-834da03b83ca",
+   "metadata": {
+    "tags": []
+   },
+   "outputs": [],
+   "source": [
+    "dataset= pd.read_csv(\"DATASET CSV/wine.csv\")"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 23,
+   "id": "437b053a-34a9-4135-b952-a69fd68303e6",
+   "metadata": {
+    "tags": []
+   },
+   "outputs": [
+    {
+     "data": {
+      "text/html": [
+       "<div>\n",
+       "<style scoped>\n",
+       "    .dataframe tbody tr th:only-of-type {\n",
+       "        vertical-align: middle;\n",
+       "    }\n",
+       "\n",
+       "    .dataframe tbody tr th {\n",
+       "        vertical-align: top;\n",
+       "    }\n",
+       "\n",
+       "    .dataframe thead th {\n",
+       "        text-align: right;\n",
+       "    }\n",
+       "</style>\n",
+       "<table border=\"1\" class=\"dataframe\">\n",
+       "  <thead>\n",
+       "    <tr style=\"text-align: right;\">\n",
+       "      <th></th>\n",
+       "      <th>Wine</th>\n",
+       "      <th>Alcohol</th>\n",
+       "      <th>Malic.acid</th>\n",
+       "      <th>Ash</th>\n",
+       "      <th>Acl</th>\n",
+       "      <th>Mg</th>\n",
+       "      <th>Phenols</th>\n",
+       "      <th>Flavanoids</th>\n",
+       "      <th>Nonflavanoid.phenols</th>\n",
+       "      <th>Proanth</th>\n",
+       "      <th>Color.int</th>\n",
+       "      <th>Hue</th>\n",
+       "      <th>OD</th>\n",
+       "      <th>Proline</th>\n",
+       "    </tr>\n",
+       "  </thead>\n",
+       "  <tbody>\n",
+       "    <tr>\n",
+       "      <th>0</th>\n",
+       "      <td>1</td>\n",
+       "      <td>14.23</td>\n",
+       "      <td>1.71</td>\n",
+       "      <td>2.43</td>\n",
+       "      <td>15.6</td>\n",
+       "      <td>127</td>\n",
+       "      <td>2.80</td>\n",
+       "      <td>3.06</td>\n",
+       "      <td>0.28</td>\n",
+       "      <td>2.29</td>\n",
+       "      <td>5.64</td>\n",
+       "      <td>1.04</td>\n",
+       "      <td>3.92</td>\n",
+       "      <td>1065</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>1</th>\n",
+       "      <td>1</td>\n",
+       "      <td>13.20</td>\n",
+       "      <td>1.78</td>\n",
+       "      <td>2.14</td>\n",
+       "      <td>11.2</td>\n",
+       "      <td>100</td>\n",
+       "      <td>2.65</td>\n",
+       "      <td>2.76</td>\n",
+       "      <td>0.26</td>\n",
+       "      <td>1.28</td>\n",
+       "      <td>4.38</td>\n",
+       "      <td>1.05</td>\n",
+       "      <td>3.40</td>\n",
+       "      <td>1050</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>2</th>\n",
+       "      <td>1</td>\n",
+       "      <td>13.16</td>\n",
+       "      <td>2.36</td>\n",
+       "      <td>2.67</td>\n",
+       "      <td>18.6</td>\n",
+       "      <td>101</td>\n",
+       "      <td>2.80</td>\n",
+       "      <td>3.24</td>\n",
+       "      <td>0.30</td>\n",
+       "      <td>2.81</td>\n",
+       "      <td>5.68</td>\n",
+       "      <td>1.03</td>\n",
+       "      <td>3.17</td>\n",
+       "      <td>1185</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>3</th>\n",
+       "      <td>1</td>\n",
+       "      <td>14.37</td>\n",
+       "      <td>1.95</td>\n",
+       "      <td>2.50</td>\n",
+       "      <td>16.8</td>\n",
+       "      <td>113</td>\n",
+       "      <td>3.85</td>\n",
+       "      <td>3.49</td>\n",
+       "      <td>0.24</td>\n",
+       "      <td>2.18</td>\n",
+       "      <td>7.80</td>\n",
+       "      <td>0.86</td>\n",
+       "      <td>3.45</td>\n",
+       "      <td>1480</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>4</th>\n",
+       "      <td>1</td>\n",
+       "      <td>13.24</td>\n",
+       "      <td>2.59</td>\n",
+       "      <td>2.87</td>\n",
+       "      <td>21.0</td>\n",
+       "      <td>118</td>\n",
+       "      <td>2.80</td>\n",
+       "      <td>2.69</td>\n",
+       "      <td>0.39</td>\n",
+       "      <td>1.82</td>\n",
+       "      <td>4.32</td>\n",
+       "      <td>1.04</td>\n",
+       "      <td>2.93</td>\n",
+       "      <td>735</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>...</th>\n",
+       "      <td>...</td>\n",
+       "      <td>...</td>\n",
+       "      <td>...</td>\n",
+       "      <td>...</td>\n",
+       "      <td>...</td>\n",
+       "      <td>...</td>\n",
+       "      <td>...</td>\n",
+       "      <td>...</td>\n",
+       "      <td>...</td>\n",
+       "      <td>...</td>\n",
+       "      <td>...</td>\n",
+       "      <td>...</td>\n",
+       "      <td>...</td>\n",
+       "      <td>...</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>173</th>\n",
+       "      <td>3</td>\n",
+       "      <td>13.71</td>\n",
+       "      <td>5.65</td>\n",
+       "      <td>2.45</td>\n",
+       "      <td>20.5</td>\n",
+       "      <td>95</td>\n",
+       "      <td>1.68</td>\n",
+       "      <td>0.61</td>\n",
+       "      <td>0.52</td>\n",
+       "      <td>1.06</td>\n",
+       "      <td>7.70</td>\n",
+       "      <td>0.64</td>\n",
+       "      <td>1.74</td>\n",
+       "      <td>740</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>174</th>\n",
+       "      <td>3</td>\n",
+       "      <td>13.40</td>\n",
+       "      <td>3.91</td>\n",
+       "      <td>2.48</td>\n",
+       "      <td>23.0</td>\n",
+       "      <td>102</td>\n",
+       "      <td>1.80</td>\n",
+       "      <td>0.75</td>\n",
+       "      <td>0.43</td>\n",
+       "      <td>1.41</td>\n",
+       "      <td>7.30</td>\n",
+       "      <td>0.70</td>\n",
+       "      <td>1.56</td>\n",
+       "      <td>750</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>175</th>\n",
+       "      <td>3</td>\n",
+       "      <td>13.27</td>\n",
+       "      <td>4.28</td>\n",
+       "      <td>2.26</td>\n",
+       "      <td>20.0</td>\n",
+       "      <td>120</td>\n",
+       "      <td>1.59</td>\n",
+       "      <td>0.69</td>\n",
+       "      <td>0.43</td>\n",
+       "      <td>1.35</td>\n",
+       "      <td>10.20</td>\n",
+       "      <td>0.59</td>\n",
+       "      <td>1.56</td>\n",
+       "      <td>835</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>176</th>\n",
+       "      <td>3</td>\n",
+       "      <td>13.17</td>\n",
+       "      <td>2.59</td>\n",
+       "      <td>2.37</td>\n",
+       "      <td>20.0</td>\n",
+       "      <td>120</td>\n",
+       "      <td>1.65</td>\n",
+       "      <td>0.68</td>\n",
+       "      <td>0.53</td>\n",
+       "      <td>1.46</td>\n",
+       "      <td>9.30</td>\n",
+       "      <td>0.60</td>\n",
+       "      <td>1.62</td>\n",
+       "      <td>840</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>177</th>\n",
+       "      <td>3</td>\n",
+       "      <td>14.13</td>\n",
+       "      <td>4.10</td>\n",
+       "      <td>2.74</td>\n",
+       "      <td>24.5</td>\n",
+       "      <td>96</td>\n",
+       "      <td>2.05</td>\n",
+       "      <td>0.76</td>\n",
+       "      <td>0.56</td>\n",
+       "      <td>1.35</td>\n",
+       "      <td>9.20</td>\n",
+       "      <td>0.61</td>\n",
+       "      <td>1.60</td>\n",
+       "      <td>560</td>\n",
+       "    </tr>\n",
+       "  </tbody>\n",
+       "</table>\n",
+       "<p>178 rows × 14 columns</p>\n",
+       "</div>"
+      ],
+      "text/plain": [
+       "     Wine  Alcohol  Malic.acid   Ash   Acl   Mg  Phenols  Flavanoids  \\\n",
+       "0       1    14.23        1.71  2.43  15.6  127     2.80        3.06   \n",
+       "1       1    13.20        1.78  2.14  11.2  100     2.65        2.76   \n",
+       "2       1    13.16        2.36  2.67  18.6  101     2.80        3.24   \n",
+       "3       1    14.37        1.95  2.50  16.8  113     3.85        3.49   \n",
+       "4       1    13.24        2.59  2.87  21.0  118     2.80        2.69   \n",
+       "..    ...      ...         ...   ...   ...  ...      ...         ...   \n",
+       "173     3    13.71        5.65  2.45  20.5   95     1.68        0.61   \n",
+       "174     3    13.40        3.91  2.48  23.0  102     1.80        0.75   \n",
+       "175     3    13.27        4.28  2.26  20.0  120     1.59        0.69   \n",
+       "176     3    13.17        2.59  2.37  20.0  120     1.65        0.68   \n",
+       "177     3    14.13        4.10  2.74  24.5   96     2.05        0.76   \n",
+       "\n",
+       "     Nonflavanoid.phenols  Proanth  Color.int   Hue    OD  Proline  \n",
+       "0                    0.28     2.29       5.64  1.04  3.92     1065  \n",
+       "1                    0.26     1.28       4.38  1.05  3.40     1050  \n",
+       "2                    0.30     2.81       5.68  1.03  3.17     1185  \n",
+       "3                    0.24     2.18       7.80  0.86  3.45     1480  \n",
+       "4                    0.39     1.82       4.32  1.04  2.93      735  \n",
+       "..                    ...      ...        ...   ...   ...      ...  \n",
+       "173                  0.52     1.06       7.70  0.64  1.74      740  \n",
+       "174                  0.43     1.41       7.30  0.70  1.56      750  \n",
+       "175                  0.43     1.35      10.20  0.59  1.56      835  \n",
+       "176                  0.53     1.46       9.30  0.60  1.62      840  \n",
+       "177                  0.56     1.35       9.20  0.61  1.60      560  \n",
+       "\n",
+       "[178 rows x 14 columns]"
+      ]
+     },
+     "execution_count": 23,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "dataset"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 25,
+   "id": "e3713273-4423-49e3-9e0b-0cc2006897b9",
+   "metadata": {
+    "tags": []
+   },
+   "outputs": [
+    {
+     "data": {
+      "text/html": [
+       "<div>\n",
+       "<style scoped>\n",
+       "    .dataframe tbody tr th:only-of-type {\n",
+       "        vertical-align: middle;\n",
+       "    }\n",
+       "\n",
+       "    .dataframe tbody tr th {\n",
+       "        vertical-align: top;\n",
+       "    }\n",
+       "\n",
+       "    .dataframe thead th {\n",
+       "        text-align: right;\n",
+       "    }\n",
+       "</style>\n",
+       "<table border=\"1\" class=\"dataframe\">\n",
+       "  <thead>\n",
+       "    <tr style=\"text-align: right;\">\n",
+       "      <th></th>\n",
+       "      <th>Wine</th>\n",
+       "      <th>Alcohol</th>\n",
+       "      <th>Malic.acid</th>\n",
+       "      <th>Ash</th>\n",
+       "      <th>Acl</th>\n",
+       "      <th>Mg</th>\n",
+       "      <th>Phenols</th>\n",
+       "      <th>Flavanoids</th>\n",
+       "      <th>Nonflavanoid.phenols</th>\n",
+       "      <th>Proanth</th>\n",
+       "      <th>Color.int</th>\n",
+       "      <th>Hue</th>\n",
+       "      <th>OD</th>\n",
+       "      <th>Proline</th>\n",
+       "    </tr>\n",
+       "  </thead>\n",
+       "  <tbody>\n",
+       "    <tr>\n",
+       "      <th>0</th>\n",
+       "      <td>1</td>\n",
+       "      <td>14.23</td>\n",
+       "      <td>1.71</td>\n",
+       "      <td>2.43</td>\n",
+       "      <td>15.6</td>\n",
+       "      <td>127</td>\n",
+       "      <td>2.80</td>\n",
+       "      <td>3.06</td>\n",
+       "      <td>0.28</td>\n",
+       "      <td>2.29</td>\n",
+       "      <td>5.64</td>\n",
+       "      <td>1.04</td>\n",
+       "      <td>3.92</td>\n",
+       "      <td>1065</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>1</th>\n",
+       "      <td>1</td>\n",
+       "      <td>13.20</td>\n",
+       "      <td>1.78</td>\n",
+       "      <td>2.14</td>\n",
+       "      <td>11.2</td>\n",
+       "      <td>100</td>\n",
+       "      <td>2.65</td>\n",
+       "      <td>2.76</td>\n",
+       "      <td>0.26</td>\n",
+       "      <td>1.28</td>\n",
+       "      <td>4.38</td>\n",
+       "      <td>1.05</td>\n",
+       "      <td>3.40</td>\n",
+       "      <td>1050</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>2</th>\n",
+       "      <td>1</td>\n",
+       "      <td>13.16</td>\n",
+       "      <td>2.36</td>\n",
+       "      <td>2.67</td>\n",
+       "      <td>18.6</td>\n",
+       "      <td>101</td>\n",
+       "      <td>2.80</td>\n",
+       "      <td>3.24</td>\n",
+       "      <td>0.30</td>\n",
+       "      <td>2.81</td>\n",
+       "      <td>5.68</td>\n",
+       "      <td>1.03</td>\n",
+       "      <td>3.17</td>\n",
+       "      <td>1185</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>3</th>\n",
+       "      <td>1</td>\n",
+       "      <td>14.37</td>\n",
+       "      <td>1.95</td>\n",
+       "      <td>2.50</td>\n",
+       "      <td>16.8</td>\n",
+       "      <td>113</td>\n",
+       "      <td>3.85</td>\n",
+       "      <td>3.49</td>\n",
+       "      <td>0.24</td>\n",
+       "      <td>2.18</td>\n",
+       "      <td>7.80</td>\n",
+       "      <td>0.86</td>\n",
+       "      <td>3.45</td>\n",
+       "      <td>1480</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>4</th>\n",
+       "      <td>1</td>\n",
+       "      <td>13.24</td>\n",
+       "      <td>2.59</td>\n",
+       "      <td>2.87</td>\n",
+       "      <td>21.0</td>\n",
+       "      <td>118</td>\n",
+       "      <td>2.80</td>\n",
+       "      <td>2.69</td>\n",
+       "      <td>0.39</td>\n",
+       "      <td>1.82</td>\n",
+       "      <td>4.32</td>\n",
+       "      <td>1.04</td>\n",
+       "      <td>2.93</td>\n",
+       "      <td>735</td>\n",
+       "    </tr>\n",
+       "  </tbody>\n",
+       "</table>\n",
+       "</div>"
+      ],
+      "text/plain": [
+       "   Wine  Alcohol  Malic.acid   Ash   Acl   Mg  Phenols  Flavanoids  \\\n",
+       "0     1    14.23        1.71  2.43  15.6  127     2.80        3.06   \n",
+       "1     1    13.20        1.78  2.14  11.2  100     2.65        2.76   \n",
+       "2     1    13.16        2.36  2.67  18.6  101     2.80        3.24   \n",
+       "3     1    14.37        1.95  2.50  16.8  113     3.85        3.49   \n",
+       "4     1    13.24        2.59  2.87  21.0  118     2.80        2.69   \n",
+       "\n",
+       "   Nonflavanoid.phenols  Proanth  Color.int   Hue    OD  Proline  \n",
+       "0                  0.28     2.29       5.64  1.04  3.92     1065  \n",
+       "1                  0.26     1.28       4.38  1.05  3.40     1050  \n",
+       "2                  0.30     2.81       5.68  1.03  3.17     1185  \n",
+       "3                  0.24     2.18       7.80  0.86  3.45     1480  \n",
+       "4                  0.39     1.82       4.32  1.04  2.93      735  "
+      ]
+     },
+     "execution_count": 25,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "dataset.head()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 27,
+   "id": "4e89bf97-91cd-4579-85fe-cd7f83633d61",
+   "metadata": {
+    "tags": []
+   },
+   "outputs": [
+    {
+     "data": {
+      "text/html": [
+       "<div>\n",
+       "<style scoped>\n",
+       "    .dataframe tbody tr th:only-of-type {\n",
+       "        vertical-align: middle;\n",
+       "    }\n",
+       "\n",
+       "    .dataframe tbody tr th {\n",
+       "        vertical-align: top;\n",
+       "    }\n",
+       "\n",
+       "    .dataframe thead th {\n",
+       "        text-align: right;\n",
+       "    }\n",
+       "</style>\n",
+       "<table border=\"1\" class=\"dataframe\">\n",
+       "  <thead>\n",
+       "    <tr style=\"text-align: right;\">\n",
+       "      <th></th>\n",
+       "      <th>Wine</th>\n",
+       "      <th>Alcohol</th>\n",
+       "      <th>Malic.acid</th>\n",
+       "      <th>Ash</th>\n",
+       "      <th>Acl</th>\n",
+       "      <th>Mg</th>\n",
+       "      <th>Phenols</th>\n",
+       "      <th>Flavanoids</th>\n",
+       "      <th>Nonflavanoid.phenols</th>\n",
+       "      <th>Proanth</th>\n",
+       "      <th>Color.int</th>\n",
+       "      <th>Hue</th>\n",
+       "      <th>OD</th>\n",
+       "      <th>Proline</th>\n",
+       "    </tr>\n",
+       "  </thead>\n",
+       "  <tbody>\n",
+       "    <tr>\n",
+       "      <th>173</th>\n",
+       "      <td>3</td>\n",
+       "      <td>13.71</td>\n",
+       "      <td>5.65</td>\n",
+       "      <td>2.45</td>\n",
+       "      <td>20.5</td>\n",
+       "      <td>95</td>\n",
+       "      <td>1.68</td>\n",
+       "      <td>0.61</td>\n",
+       "      <td>0.52</td>\n",
+       "      <td>1.06</td>\n",
+       "      <td>7.7</td>\n",
+       "      <td>0.64</td>\n",
+       "      <td>1.74</td>\n",
+       "      <td>740</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>174</th>\n",
+       "      <td>3</td>\n",
+       "      <td>13.40</td>\n",
+       "      <td>3.91</td>\n",
+       "      <td>2.48</td>\n",
+       "      <td>23.0</td>\n",
+       "      <td>102</td>\n",
+       "      <td>1.80</td>\n",
+       "      <td>0.75</td>\n",
+       "      <td>0.43</td>\n",
+       "      <td>1.41</td>\n",
+       "      <td>7.3</td>\n",
+       "      <td>0.70</td>\n",
+       "      <td>1.56</td>\n",
+       "      <td>750</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>175</th>\n",
+       "      <td>3</td>\n",
+       "      <td>13.27</td>\n",
+       "      <td>4.28</td>\n",
+       "      <td>2.26</td>\n",
+       "      <td>20.0</td>\n",
+       "      <td>120</td>\n",
+       "      <td>1.59</td>\n",
+       "      <td>0.69</td>\n",
+       "      <td>0.43</td>\n",
+       "      <td>1.35</td>\n",
+       "      <td>10.2</td>\n",
+       "      <td>0.59</td>\n",
+       "      <td>1.56</td>\n",
+       "      <td>835</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>176</th>\n",
+       "      <td>3</td>\n",
+       "      <td>13.17</td>\n",
+       "      <td>2.59</td>\n",
+       "      <td>2.37</td>\n",
+       "      <td>20.0</td>\n",
+       "      <td>120</td>\n",
+       "      <td>1.65</td>\n",
+       "      <td>0.68</td>\n",
+       "      <td>0.53</td>\n",
+       "      <td>1.46</td>\n",
+       "      <td>9.3</td>\n",
+       "      <td>0.60</td>\n",
+       "      <td>1.62</td>\n",
+       "      <td>840</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>177</th>\n",
+       "      <td>3</td>\n",
+       "      <td>14.13</td>\n",
+       "      <td>4.10</td>\n",
+       "      <td>2.74</td>\n",
+       "      <td>24.5</td>\n",
+       "      <td>96</td>\n",
+       "      <td>2.05</td>\n",
+       "      <td>0.76</td>\n",
+       "      <td>0.56</td>\n",
+       "      <td>1.35</td>\n",
+       "      <td>9.2</td>\n",
+       "      <td>0.61</td>\n",
+       "      <td>1.60</td>\n",
+       "      <td>560</td>\n",
+       "    </tr>\n",
+       "  </tbody>\n",
+       "</table>\n",
+       "</div>"
+      ],
+      "text/plain": [
+       "     Wine  Alcohol  Malic.acid   Ash   Acl   Mg  Phenols  Flavanoids  \\\n",
+       "173     3    13.71        5.65  2.45  20.5   95     1.68        0.61   \n",
+       "174     3    13.40        3.91  2.48  23.0  102     1.80        0.75   \n",
+       "175     3    13.27        4.28  2.26  20.0  120     1.59        0.69   \n",
+       "176     3    13.17        2.59  2.37  20.0  120     1.65        0.68   \n",
+       "177     3    14.13        4.10  2.74  24.5   96     2.05        0.76   \n",
+       "\n",
+       "     Nonflavanoid.phenols  Proanth  Color.int   Hue    OD  Proline  \n",
+       "173                  0.52     1.06        7.7  0.64  1.74      740  \n",
+       "174                  0.43     1.41        7.3  0.70  1.56      750  \n",
+       "175                  0.43     1.35       10.2  0.59  1.56      835  \n",
+       "176                  0.53     1.46        9.3  0.60  1.62      840  \n",
+       "177                  0.56     1.35        9.2  0.61  1.60      560  "
+      ]
+     },
+     "execution_count": 27,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "dataset.tail()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 64,
+   "id": "789354df-e5ce-4c65-9426-a0ac03e15d16",
+   "metadata": {
+    "tags": []
+   },
+   "outputs": [],
+   "source": [
+    "dataset= pd.DataFrame(dataset)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 66,
+   "id": "510ab54b-b89f-414a-9b79-41ded624cad1",
+   "metadata": {
+    "tags": []
+   },
+   "outputs": [],
+   "source": [
+    "alterdataset=dataset.iloc[:,-6:]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 67,
+   "id": "792797cd-283a-4412-9295-d5b9ab6560a3",
+   "metadata": {
+    "tags": []
+   },
+   "outputs": [
+    {
+     "data": {
+      "text/html": [
+       "<div>\n",
+       "<style scoped>\n",
+       "    .dataframe tbody tr th:only-of-type {\n",
+       "        vertical-align: middle;\n",
+       "    }\n",
+       "\n",
+       "    .dataframe tbody tr th {\n",
+       "        vertical-align: top;\n",
+       "    }\n",
+       "\n",
+       "    .dataframe thead th {\n",
+       "        text-align: right;\n",
+       "    }\n",
+       "</style>\n",
+       "<table border=\"1\" class=\"dataframe\">\n",
+       "  <thead>\n",
+       "    <tr style=\"text-align: right;\">\n",
+       "      <th></th>\n",
+       "      <th>Nonflavanoid.phenols</th>\n",
+       "      <th>Proanth</th>\n",
+       "      <th>Color.int</th>\n",
+       "      <th>Hue</th>\n",
+       "      <th>OD</th>\n",
+       "      <th>Proline</th>\n",
+       "    </tr>\n",
+       "  </thead>\n",
+       "  <tbody>\n",
+       "    <tr>\n",
+       "      <th>0</th>\n",
+       "      <td>0.28</td>\n",
+       "      <td>2.29</td>\n",
+       "      <td>5.64</td>\n",
+       "      <td>1.04</td>\n",
+       "      <td>3.92</td>\n",
+       "      <td>1065</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>1</th>\n",
+       "      <td>0.26</td>\n",
+       "      <td>1.28</td>\n",
+       "      <td>4.38</td>\n",
+       "      <td>1.05</td>\n",
+       "      <td>3.40</td>\n",
+       "      <td>1050</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>2</th>\n",
+       "      <td>0.30</td>\n",
+       "      <td>2.81</td>\n",
+       "      <td>5.68</td>\n",
+       "      <td>1.03</td>\n",
+       "      <td>3.17</td>\n",
+       "      <td>1185</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>3</th>\n",
+       "      <td>0.24</td>\n",
+       "      <td>2.18</td>\n",
+       "      <td>7.80</td>\n",
+       "      <td>0.86</td>\n",
+       "      <td>3.45</td>\n",
+       "      <td>1480</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>4</th>\n",
+       "      <td>0.39</td>\n",
+       "      <td>1.82</td>\n",
+       "      <td>4.32</td>\n",
+       "      <td>1.04</td>\n",
+       "      <td>2.93</td>\n",
+       "      <td>735</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>...</th>\n",
+       "      <td>...</td>\n",
+       "      <td>...</td>\n",
+       "      <td>...</td>\n",
+       "      <td>...</td>\n",
+       "      <td>...</td>\n",
+       "      <td>...</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>173</th>\n",
+       "      <td>0.52</td>\n",
+       "      <td>1.06</td>\n",
+       "      <td>7.70</td>\n",
+       "      <td>0.64</td>\n",
+       "      <td>1.74</td>\n",
+       "      <td>740</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>174</th>\n",
+       "      <td>0.43</td>\n",
+       "      <td>1.41</td>\n",
+       "      <td>7.30</td>\n",
+       "      <td>0.70</td>\n",
+       "      <td>1.56</td>\n",
+       "      <td>750</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>175</th>\n",
+       "      <td>0.43</td>\n",
+       "      <td>1.35</td>\n",
+       "      <td>10.20</td>\n",
+       "      <td>0.59</td>\n",
+       "      <td>1.56</td>\n",
+       "      <td>835</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>176</th>\n",
+       "      <td>0.53</td>\n",
+       "      <td>1.46</td>\n",
+       "      <td>9.30</td>\n",
+       "      <td>0.60</td>\n",
+       "      <td>1.62</td>\n",
+       "      <td>840</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>177</th>\n",
+       "      <td>0.56</td>\n",
+       "      <td>1.35</td>\n",
+       "      <td>9.20</td>\n",
+       "      <td>0.61</td>\n",
+       "      <td>1.60</td>\n",
+       "      <td>560</td>\n",
+       "    </tr>\n",
+       "  </tbody>\n",
+       "</table>\n",
+       "<p>178 rows × 6 columns</p>\n",
+       "</div>"
+      ],
+      "text/plain": [
+       "     Nonflavanoid.phenols  Proanth  Color.int   Hue    OD  Proline\n",
+       "0                    0.28     2.29       5.64  1.04  3.92     1065\n",
+       "1                    0.26     1.28       4.38  1.05  3.40     1050\n",
+       "2                    0.30     2.81       5.68  1.03  3.17     1185\n",
+       "3                    0.24     2.18       7.80  0.86  3.45     1480\n",
+       "4                    0.39     1.82       4.32  1.04  2.93      735\n",
+       "..                    ...      ...        ...   ...   ...      ...\n",
+       "173                  0.52     1.06       7.70  0.64  1.74      740\n",
+       "174                  0.43     1.41       7.30  0.70  1.56      750\n",
+       "175                  0.43     1.35      10.20  0.59  1.56      835\n",
+       "176                  0.53     1.46       9.30  0.60  1.62      840\n",
+       "177                  0.56     1.35       9.20  0.61  1.60      560\n",
+       "\n",
+       "[178 rows x 6 columns]"
+      ]
+     },
+     "execution_count": 67,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "alterdataset"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 68,
+   "id": "57ac58c6-40a2-44de-8387-5a40ca85923d",
+   "metadata": {
+    "tags": []
+   },
+   "outputs": [
+    {
+     "data": {
+      "text/html": [
+       "<div>\n",
+       "<style scoped>\n",
+       "    .dataframe tbody tr th:only-of-type {\n",
+       "        vertical-align: middle;\n",
+       "    }\n",
+       "\n",
+       "    .dataframe tbody tr th {\n",
+       "        vertical-align: top;\n",
+       "    }\n",
+       "\n",
+       "    .dataframe thead th {\n",
+       "        text-align: right;\n",
+       "    }\n",
+       "</style>\n",
+       "<table border=\"1\" class=\"dataframe\">\n",
+       "  <thead>\n",
+       "    <tr style=\"text-align: right;\">\n",
+       "      <th></th>\n",
+       "      <th>Wine</th>\n",
+       "      <th>Alcohol</th>\n",
+       "      <th>Malic.acid</th>\n",
+       "      <th>Ash</th>\n",
+       "      <th>Acl</th>\n",
+       "      <th>Mg</th>\n",
+       "      <th>Phenols</th>\n",
+       "      <th>Flavanoids</th>\n",
+       "      <th>Nonflavanoid.phenols</th>\n",
+       "      <th>Proanth</th>\n",
+       "      <th>Color.int</th>\n",
+       "      <th>Hue</th>\n",
+       "      <th>OD</th>\n",
+       "      <th>Proline</th>\n",
+       "    </tr>\n",
+       "  </thead>\n",
+       "  <tbody>\n",
+       "    <tr>\n",
+       "      <th>count</th>\n",
+       "      <td>178.000000</td>\n",
+       "      <td>178.000000</td>\n",
+       "      <td>178.000000</td>\n",
+       "      <td>178.000000</td>\n",
+       "      <td>178.000000</td>\n",
+       "      <td>178.000000</td>\n",
+       "      <td>178.000000</td>\n",
+       "      <td>178.000000</td>\n",
+       "      <td>178.000000</td>\n",
+       "      <td>178.000000</td>\n",
+       "      <td>178.000000</td>\n",
+       "      <td>178.000000</td>\n",
+       "      <td>178.000000</td>\n",
+       "      <td>178.000000</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>mean</th>\n",
+       "      <td>1.938202</td>\n",
+       "      <td>13.000618</td>\n",
+       "      <td>2.336348</td>\n",
+       "      <td>2.366517</td>\n",
+       "      <td>19.494944</td>\n",
+       "      <td>99.741573</td>\n",
+       "      <td>2.295112</td>\n",
+       "      <td>2.029270</td>\n",
+       "      <td>0.361854</td>\n",
+       "      <td>1.590899</td>\n",
+       "      <td>5.058090</td>\n",
+       "      <td>0.957449</td>\n",
+       "      <td>2.611685</td>\n",
+       "      <td>746.893258</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>std</th>\n",
+       "      <td>0.775035</td>\n",
+       "      <td>0.811827</td>\n",
+       "      <td>1.117146</td>\n",
+       "      <td>0.274344</td>\n",
+       "      <td>3.339564</td>\n",
+       "      <td>14.282484</td>\n",
+       "      <td>0.625851</td>\n",
+       "      <td>0.998859</td>\n",
+       "      <td>0.124453</td>\n",
+       "      <td>0.572359</td>\n",
+       "      <td>2.318286</td>\n",
+       "      <td>0.228572</td>\n",
+       "      <td>0.709990</td>\n",
+       "      <td>314.907474</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>min</th>\n",
+       "      <td>1.000000</td>\n",
+       "      <td>11.030000</td>\n",
+       "      <td>0.740000</td>\n",
+       "      <td>1.360000</td>\n",
+       "      <td>10.600000</td>\n",
+       "      <td>70.000000</td>\n",
+       "      <td>0.980000</td>\n",
+       "      <td>0.340000</td>\n",
+       "      <td>0.130000</td>\n",
+       "      <td>0.410000</td>\n",
+       "      <td>1.280000</td>\n",
+       "      <td>0.480000</td>\n",
+       "      <td>1.270000</td>\n",
+       "      <td>278.000000</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>25%</th>\n",
+       "      <td>1.000000</td>\n",
+       "      <td>12.362500</td>\n",
+       "      <td>1.602500</td>\n",
+       "      <td>2.210000</td>\n",
+       "      <td>17.200000</td>\n",
+       "      <td>88.000000</td>\n",
+       "      <td>1.742500</td>\n",
+       "      <td>1.205000</td>\n",
+       "      <td>0.270000</td>\n",
+       "      <td>1.250000</td>\n",
+       "      <td>3.220000</td>\n",
+       "      <td>0.782500</td>\n",
+       "      <td>1.937500</td>\n",
+       "      <td>500.500000</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>50%</th>\n",
+       "      <td>2.000000</td>\n",
+       "      <td>13.050000</td>\n",
+       "      <td>1.865000</td>\n",
+       "      <td>2.360000</td>\n",
+       "      <td>19.500000</td>\n",
+       "      <td>98.000000</td>\n",
+       "      <td>2.355000</td>\n",
+       "      <td>2.135000</td>\n",
+       "      <td>0.340000</td>\n",
+       "      <td>1.555000</td>\n",
+       "      <td>4.690000</td>\n",
+       "      <td>0.965000</td>\n",
+       "      <td>2.780000</td>\n",
+       "      <td>673.500000</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>75%</th>\n",
+       "      <td>3.000000</td>\n",
+       "      <td>13.677500</td>\n",
+       "      <td>3.082500</td>\n",
+       "      <td>2.557500</td>\n",
+       "      <td>21.500000</td>\n",
+       "      <td>107.000000</td>\n",
+       "      <td>2.800000</td>\n",
+       "      <td>2.875000</td>\n",
+       "      <td>0.437500</td>\n",
+       "      <td>1.950000</td>\n",
+       "      <td>6.200000</td>\n",
+       "      <td>1.120000</td>\n",
+       "      <td>3.170000</td>\n",
+       "      <td>985.000000</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>max</th>\n",
+       "      <td>3.000000</td>\n",
+       "      <td>14.830000</td>\n",
+       "      <td>5.800000</td>\n",
+       "      <td>3.230000</td>\n",
+       "      <td>30.000000</td>\n",
+       "      <td>162.000000</td>\n",
+       "      <td>3.880000</td>\n",
+       "      <td>5.080000</td>\n",
+       "      <td>0.660000</td>\n",
+       "      <td>3.580000</td>\n",
+       "      <td>13.000000</td>\n",
+       "      <td>1.710000</td>\n",
+       "      <td>4.000000</td>\n",
+       "      <td>1680.000000</td>\n",
+       "    </tr>\n",
+       "  </tbody>\n",
+       "</table>\n",
+       "</div>"
+      ],
+      "text/plain": [
+       "             Wine     Alcohol  Malic.acid         Ash         Acl          Mg  \\\n",
+       "count  178.000000  178.000000  178.000000  178.000000  178.000000  178.000000   \n",
+       "mean     1.938202   13.000618    2.336348    2.366517   19.494944   99.741573   \n",
+       "std      0.775035    0.811827    1.117146    0.274344    3.339564   14.282484   \n",
+       "min      1.000000   11.030000    0.740000    1.360000   10.600000   70.000000   \n",
+       "25%      1.000000   12.362500    1.602500    2.210000   17.200000   88.000000   \n",
+       "50%      2.000000   13.050000    1.865000    2.360000   19.500000   98.000000   \n",
+       "75%      3.000000   13.677500    3.082500    2.557500   21.500000  107.000000   \n",
+       "max      3.000000   14.830000    5.800000    3.230000   30.000000  162.000000   \n",
+       "\n",
+       "          Phenols  Flavanoids  Nonflavanoid.phenols     Proanth   Color.int  \\\n",
+       "count  178.000000  178.000000            178.000000  178.000000  178.000000   \n",
+       "mean     2.295112    2.029270              0.361854    1.590899    5.058090   \n",
+       "std      0.625851    0.998859              0.124453    0.572359    2.318286   \n",
+       "min      0.980000    0.340000              0.130000    0.410000    1.280000   \n",
+       "25%      1.742500    1.205000              0.270000    1.250000    3.220000   \n",
+       "50%      2.355000    2.135000              0.340000    1.555000    4.690000   \n",
+       "75%      2.800000    2.875000              0.437500    1.950000    6.200000   \n",
+       "max      3.880000    5.080000              0.660000    3.580000   13.000000   \n",
+       "\n",
+       "              Hue          OD      Proline  \n",
+       "count  178.000000  178.000000   178.000000  \n",
+       "mean     0.957449    2.611685   746.893258  \n",
+       "std      0.228572    0.709990   314.907474  \n",
+       "min      0.480000    1.270000   278.000000  \n",
+       "25%      0.782500    1.937500   500.500000  \n",
+       "50%      0.965000    2.780000   673.500000  \n",
+       "75%      1.120000    3.170000   985.000000  \n",
+       "max      1.710000    4.000000  1680.000000  "
+      ]
+     },
+     "execution_count": 68,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "dataset.describe()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 3,
+   "id": "da63d6b2-a203-4e50-b480-34c6ae115124",
+   "metadata": {
+    "tags": []
+   },
+   "outputs": [],
+   "source": [
+    "#es 7"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 4,
+   "id": "f004b6e3-e91e-4c75-8598-0c6e14cfee20",
+   "metadata": {
+    "tags": []
+   },
+   "outputs": [],
+   "source": [
+    "fatturati_dict = {1997: 12_000, 1998: 15_000, 1999: 20_000, 2000: 23_000, 2001: 25_000, 2002: 17_000, 2003: 14_000, 2004: 21_000}"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 6,
+   "id": "ebcee93e-efba-4152-9c46-6501de7a1ff7",
+   "metadata": {
+    "tags": []
+   },
+   "outputs": [],
+   "source": [
+    "fatturati_series = pd.Series([12_000, 15_000, 20_000, 23_000, 25_000, 17_000, 14_000, 21_000], index=range(1997, 2005))"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 7,
+   "id": "56f5d2cc-ac7f-4521-a676-c06780b65b20",
+   "metadata": {
+    "tags": []
+   },
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "{1997: 12000,\n",
+       " 1998: 15000,\n",
+       " 1999: 20000,\n",
+       " 2000: 23000,\n",
+       " 2001: 25000,\n",
+       " 2002: 17000,\n",
+       " 2003: 14000,\n",
+       " 2004: 21000}"
+      ]
+     },
+     "execution_count": 7,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "fatturati_dict"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 8,
+   "id": "1f007511-a702-4b01-a9dd-738dd93c7088",
+   "metadata": {
+    "tags": []
+   },
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "1997    12000\n",
+       "1998    15000\n",
+       "1999    20000\n",
+       "2000    23000\n",
+       "2001    25000\n",
+       "2002    17000\n",
+       "2003    14000\n",
+       "2004    21000\n",
+       "dtype: int64"
+      ]
+     },
+     "execution_count": 8,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "fatturati_series"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 9,
+   "id": "d42fb12e-fe75-454c-95fe-5e31811bd797",
+   "metadata": {
+    "tags": []
+   },
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "12000"
+      ]
+     },
+     "execution_count": 9,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "fatturati_dict[1997]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 10,
+   "id": "aee76065-54ac-4d9f-aac3-271c3db1ceda",
+   "metadata": {
+    "tags": []
+   },
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "12000"
+      ]
+     },
+     "execution_count": 10,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "fatturati_series[1997]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 11,
+   "id": "54414729-b518-41d4-aa6e-49534ed903ad",
+   "metadata": {
+    "tags": []
+   },
+   "outputs": [],
+   "source": [
+    "#Il dizionario non è una struttura-dati ordinata,mentre la series è ordinata ed è una funzione interna di Pandas, per cui, in questa, possiamo eseguire tutte le operazioni che Pandas ci permette."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 77,
+   "id": "3eb76ce5-dc75-45ac-b2f4-e030335e297d",
+   "metadata": {
+    "tags": []
+   },
+   "outputs": [],
+   "source": [
+    "listadiliste= [[1,1,1,1],\n",
+    "               [5,1,1,1],\n",
+    "               [20,-4,0,42]]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 79,
+   "id": "cf5c1cf5-8c47-4f5b-8f4a-8cd1844e29aa",
+   "metadata": {
+    "tags": []
+   },
+   "outputs": [],
+   "source": [
+    "typearray=np.array(listadiliste)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 80,
+   "id": "17f3ce0e-b2c1-4286-9df7-0c792616d71d",
+   "metadata": {
+    "tags": []
+   },
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "numpy.ndarray"
+      ]
+     },
+     "execution_count": 80,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "type(typearray)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 82,
+   "id": "093abb63-74f6-4ca7-9085-cecb12220ca2",
+   "metadata": {
+    "tags": []
+   },
+   "outputs": [],
+   "source": [
+    "liste5=[[10, 22, 21, 8, 9],\n",
+    "[9, 42, 3, 18, 11],\n",
+    "[5, 4, 30, 12, 29],\n",
+    "[37, 31, 7, 2, 26],\n",
+    "[8, 6, 4, 33, 15]]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 84,
+   "id": "da6ba2cf-0c2b-42e0-a811-07a246d40c17",
+   "metadata": {
+    "tags": []
+   },
+   "outputs": [],
+   "source": [
+    "array5=np.array(liste5)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 85,
+   "id": "d5391d56-1204-4a27-a2d5-4343d1a56e3d",
+   "metadata": {
+    "tags": []
+   },
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "array([[10, 22, 21,  8,  9],\n",
+       "       [ 9, 42,  3, 18, 11],\n",
+       "       [ 5,  4, 30, 12, 29],\n",
+       "       [37, 31,  7,  2, 26],\n",
+       "       [ 8,  6,  4, 33, 15]])"
+      ]
+     },
+     "execution_count": 85,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "array5"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 93,
+   "id": "67ddd970-dbc2-4573-a113-f1d98ab74fcf",
+   "metadata": {
+    "tags": []
+   },
+   "outputs": [],
+   "source": [
+    "minimo= array5.min()\n",
+    "massimo=array5.max()\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 97,
+   "id": "fe890c08-903b-4495-8282-2f30abde4fe3",
+   "metadata": {
+    "tags": []
+   },
+   "outputs": [],
+   "source": [
+    "array5menomin= (array5-minimo) / (massimo-minimo)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 98,
+   "id": "ada66177-204c-4d0d-9808-558816830117",
+   "metadata": {
+    "tags": []
+   },
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "array([[0.2  , 0.5  , 0.475, 0.15 , 0.175],\n",
+       "       [0.175, 1.   , 0.025, 0.4  , 0.225],\n",
+       "       [0.075, 0.05 , 0.7  , 0.25 , 0.675],\n",
+       "       [0.875, 0.725, 0.125, 0.   , 0.6  ],\n",
+       "       [0.15 , 0.1  , 0.05 , 0.775, 0.325]])"
+      ]
+     },
+     "execution_count": 98,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "array5menomin"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "d6847cf2-84c9-41f1-9923-1b54dae50e46",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "divisomassimo= array5menomin/massimo-minimo"
+   ]
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3 (ipykernel)",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.11.5"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
